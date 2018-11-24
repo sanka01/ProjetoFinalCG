@@ -4,6 +4,7 @@ import br.unitins.projetofinalcg.AndGraph.AGGameManager;
 import br.unitins.projetofinalcg.AndGraph.AGInputManager;
 import br.unitins.projetofinalcg.AndGraph.AGScene;
 import br.unitins.projetofinalcg.AndGraph.AGScreenManager;
+import br.unitins.projetofinalcg.AndGraph.AGSoundManager;
 import br.unitins.projetofinalcg.AndGraph.AGSprite;
 import br.unitins.projetofinalcg.AndGraph.AGTimer;
 
@@ -19,6 +20,9 @@ public class CenaAbertura extends AGScene {
 
     @Override
     public void init() {
+        AGSoundManager.vrMusic.loadMusic("arkanoid.mp3", true);
+        AGSoundManager.vrMusic.play();
+        AGSoundManager.vrMusic.setVolume(0.3f, 0.3f);
         //chamado toda vez que uma cena é apresentada
         setSceneBackgroundColor(1, 1, 0);
         timer = new AGTimer(3000);
@@ -48,6 +52,7 @@ public class CenaAbertura extends AGScene {
         if ( timer.isTimeEnded() ||
                 AGInputManager.vrTouchEvents.screenClicked()) {
             vrGameManager.setCurrentScene(Principal.MENU);
+            return;
         }
 
 

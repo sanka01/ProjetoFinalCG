@@ -10,11 +10,13 @@ public class Principal extends AGActivityGame {
     public static final int CONFIGURACOES = 1;
     public static final int CREDITOS = 2;
     public static final int MENU = 3;
+    public static final int JOGO = 4;
 
     CenaAbertura abertura = null;
     CenaConfiguracoes configuracoes = null;
     CenaCreditos creditos = null;
     CenaMenu menu = null;
+    CenaJogo jogo = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +31,13 @@ public class Principal extends AGActivityGame {
         configuracoes = new CenaConfiguracoes(getGameManager());
         creditos = new CenaCreditos(getGameManager());
         menu = new CenaMenu(getGameManager());
+        jogo = new CenaJogo(getGameManager());
         //registra a cena ao gerenciador
         getGameManager().addScene(abertura);
         getGameManager().addScene(configuracoes);
         getGameManager().addScene(creditos);
         getGameManager().addScene(menu);
+        getGameManager().addScene(jogo);
 
         getGameManager().setCurrentScene(ABERTURA);
     }

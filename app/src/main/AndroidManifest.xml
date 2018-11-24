@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.unitins.projetofinalcg"
-    >
+    package="br.unitins.projetofinalcg">
 
     <application
         android:allowBackup="true"
@@ -14,7 +13,7 @@
 
         >
         <activity android:name=".Principal"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

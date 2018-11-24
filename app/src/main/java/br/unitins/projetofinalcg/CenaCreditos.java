@@ -30,9 +30,11 @@ public class CenaCreditos  extends AGScene {
     public void loop() {
         if (AGInputManager.vrTouchEvents.screenClicked()){
             vrGameManager.setCurrentScene(Principal.MENU);
+            return;
         }
         if (AGInputManager.vrTouchEvents.backButtonClicked()){
-            vrGameManager.vrActivity.finish();
+            vrGameManager.setCurrentScene(Principal.MENU);
+            return;
         }
 
     }
