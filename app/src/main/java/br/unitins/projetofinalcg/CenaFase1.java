@@ -49,9 +49,7 @@ public class CenaFase1 extends AGScene {
                 cor = bloco.getIdCor(z);
 
                 if (cor != 0) {
-                    if (cor == Bloco.SILVER) {
-                        bloco.setHp(5);
-                    }
+
                     bloco.setVrSprite(createSprite(cor, 1, 1));
                     bloco.getVrSprite().setScreenPercent(9, 5);
                     bloco.getVrSprite().vrPosition.setXY(

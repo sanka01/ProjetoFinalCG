@@ -10,6 +10,7 @@ public class Bloco {
     public static final int ORANGE = 4;
     public static final int PINK = 5;
     public static final int GREEN = 6;
+    public static final int GOLD = 7;
 
     private AGSprite vrSprite = null;
     private int hp = 1;
@@ -25,7 +26,8 @@ public class Bloco {
     public int getIdCor(int i) {
         switch (i) {
             case SILVER:
-                pontuacao = 50;
+                pontuacao = 50 * Configuracoes.round;
+                hp = 3;
                 return R.mipmap.silverwall;
             case RED:
                 pontuacao = 90;
@@ -42,6 +44,10 @@ public class Bloco {
             case GREEN:
                 pontuacao = 80;
                 return R.mipmap.greenwall;
+            case GOLD:
+                hp = -1;
+                pontuacao = 0;
+                return 0;
         }
         return 0;
     }

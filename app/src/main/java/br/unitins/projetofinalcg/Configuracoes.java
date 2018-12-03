@@ -11,13 +11,12 @@ import br.unitins.projetofinalcg.AndGraph.AGTimer;
 
 public class Configuracoes {
 
-    public static int round = 2;
+    public static int round = 1;
     public static int pontuacao = 0;
     public static ArrayList<AGSprite> pontos = null;
     public static AGTimer gameOver = null;
     public static boolean isPlay = true;
     public static AGSprite modulo = null;
-    public static AGSprite background = null;
     public static AGSprite bola = null;
     public static AGSprite botaoPause = null;
     public static float direcaoX = 1, direcaoY = 1, velocidadeX = 1, velocidadeY = 1;
@@ -28,7 +27,7 @@ public class Configuracoes {
 
     public static AGSprite criaBola(AGScene cena, float velocidadeX, float velocidadeY) {
         AGSprite bola = cena.createSprite(R.mipmap.bola, 1, 1);
-        bola.setScreenPercent(5, 5);
+        bola.setScreenPercent(3, 3);
         bola.vrPosition.setXY((AGScreenManager.iScreenWidth / 100) * 50, (AGScreenManager.iScreenHeight / 100) * 14);
         bola.vrDirection.setXY(velocidadeX, velocidadeY);
         return bola;

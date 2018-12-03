@@ -34,16 +34,117 @@ public class CenaFase2 extends AGScene {
         //chamado toda vez que uma cena é apresentada
         setSceneBackgroundColor(1, 1, 1);
 
-        for (int j = 95; j >= 45; j -= 5) {
+        for (int i = 95; i >= 55; i -= 5) {
 
             Bloco bloco = new Bloco();
             int cor = Bloco.ORANGE;
+            cor = bloco.getIdCor(cor);
             bloco.setVrSprite(createSprite(cor, 1, 1));
             bloco.getVrSprite().setScreenPercent(9, 5);
             bloco.getVrSprite().vrPosition.setXY(
-                    (AGScreenManager.iScreenWidth / 11), (AGScreenManager.iScreenHeight / 100) * j);
+                    (AGScreenManager.iScreenWidth / 11), (AGScreenManager.iScreenHeight / 100) * i);
             Configuracoes.blocos.add(bloco);
         }
+        for (int i = 90; i >= 55; i -= 5) {
+            Bloco bloco = new Bloco();
+            int cor = Bloco.BLUE;
+            cor = bloco.getIdCor(cor);
+            bloco.setVrSprite(createSprite(cor, 1, 1));
+            bloco.getVrSprite().setScreenPercent(9, 5);
+            bloco.getVrSprite().vrPosition.setXY(
+                    (AGScreenManager.iScreenWidth / 11) * 2, (AGScreenManager.iScreenHeight / 100) * i);
+            Configuracoes.blocos.add(bloco);
+        }
+        for (int i = 85; i >= 55; i -= 5) {
+            Bloco bloco = new Bloco();
+            int cor = Bloco.GREEN;
+            cor = bloco.getIdCor(cor);
+            bloco.setVrSprite(createSprite(cor, 1, 1));
+            bloco.getVrSprite().setScreenPercent(9, 5);
+            bloco.getVrSprite().vrPosition.setXY(
+                    (AGScreenManager.iScreenWidth / 11) * 3, (AGScreenManager.iScreenHeight / 100) * i);
+            Configuracoes.blocos.add(bloco);
+        }
+        for (int i = 80; i >= 55; i -= 5) {
+            Bloco bloco = new Bloco();
+            int cor = Bloco.BLUE;
+            cor = bloco.getIdCor(cor);
+            bloco.setVrSprite(createSprite(cor, 1, 1));
+            bloco.getVrSprite().setScreenPercent(9, 5);
+            bloco.getVrSprite().vrPosition.setXY(
+                    (AGScreenManager.iScreenWidth / 11) * 4, (AGScreenManager.iScreenHeight / 100) * i);
+            Configuracoes.blocos.add(bloco);
+        }
+        for (int i = 75; i >= 55; i -= 5) {
+            Bloco bloco = new Bloco();
+            int cor = Bloco.RED;
+            cor = bloco.getIdCor(cor);
+            bloco.setVrSprite(createSprite(cor, 1, 1));
+            bloco.getVrSprite().setScreenPercent(9, 5);
+            bloco.getVrSprite().vrPosition.setXY(
+                    (AGScreenManager.iScreenWidth / 11) * 5, (AGScreenManager.iScreenHeight / 100) * i);
+            Configuracoes.blocos.add(bloco);
+        }
+        for (int i = 70; i >= 55; i -= 5) {
+            Bloco bloco = new Bloco();
+            int cor = Bloco.ORANGE;
+            cor = bloco.getIdCor(cor);
+            bloco.setVrSprite(createSprite(cor, 1, 1));
+            bloco.getVrSprite().setScreenPercent(9, 5);
+            bloco.getVrSprite().vrPosition.setXY(
+                    (AGScreenManager.iScreenWidth / 11) * 6, (AGScreenManager.iScreenHeight / 100) * i);
+            Configuracoes.blocos.add(bloco);
+        }
+        for (int i = 65; i >= 55; i -= 5) {
+            Bloco bloco = new Bloco();
+            int cor = Bloco.BLUE;
+            cor = bloco.getIdCor(cor);
+            bloco.setVrSprite(createSprite(cor, 1, 1));
+            bloco.getVrSprite().setScreenPercent(9, 5);
+            bloco.getVrSprite().vrPosition.setXY(
+                    (AGScreenManager.iScreenWidth / 11) * 7, (AGScreenManager.iScreenHeight / 100) * i);
+            Configuracoes.blocos.add(bloco);
+        }
+        for (int i = 60; i >= 55; i -= 5) {
+            Bloco bloco = new Bloco();
+            int cor = Bloco.GREEN;
+            cor = bloco.getIdCor(cor);
+            bloco.setVrSprite(createSprite(cor, 1, 1));
+            bloco.getVrSprite().setScreenPercent(9, 5);
+            bloco.getVrSprite().vrPosition.setXY(
+                    (AGScreenManager.iScreenWidth / 11) * 8, (AGScreenManager.iScreenHeight / 100) * i);
+            Configuracoes.blocos.add(bloco);
+        }
+        for (int i = 55; i >= 55; i -= 5) {
+            Bloco bloco = new Bloco();
+            int cor = Bloco.RED;
+            cor = bloco.getIdCor(cor);
+            bloco.setVrSprite(createSprite(cor, 1, 1));
+            bloco.getVrSprite().setScreenPercent(9, 5);
+            bloco.getVrSprite().vrPosition.setXY(
+                    (AGScreenManager.iScreenWidth / 11) * 9, (AGScreenManager.iScreenHeight / 100) * i);
+            Configuracoes.blocos.add(bloco);
+        }
+        for (int i = 1; i < 10; i++) {
+            Bloco bloco = new Bloco();
+            int cor = Bloco.SILVER;
+            cor = bloco.getIdCor(cor);
+            bloco.setVrSprite(createSprite(cor, 1, 1));
+            bloco.getVrSprite().setScreenPercent(9, 5);
+            bloco.getVrSprite().vrPosition.setXY(
+                    (AGScreenManager.iScreenWidth / 11) * i, (AGScreenManager.iScreenHeight / 100) * 50);
+            Configuracoes.blocos.add(bloco);
+        }
+        Bloco bloco = new Bloco();
+        int cor = Bloco.PINK;
+        cor = bloco.getIdCor(cor);
+        bloco.setVrSprite(createSprite(cor, 1, 1));
+        bloco.getVrSprite().setScreenPercent(9, 5);
+        bloco.getVrSprite().vrPosition.setXY(
+                (AGScreenManager.iScreenWidth / 11) * 10, (AGScreenManager.iScreenHeight / 100) * 50);
+        Configuracoes.blocos.add(bloco);
+
+
         Configuracoes.iniciaPontos(this);
 
     }
