@@ -368,7 +368,7 @@ public class AGSprite
 	public void addAnimation(int iFPS, boolean bRepete, int initFrame, int endFrame)
 	{
 		//Try the correct sequency
-		if (endFrame <= initFrame)
+        if (endFrame < initFrame)
 			return;
 		
 		//Creates the array frame
@@ -659,24 +659,54 @@ public class AGSprite
 	* Parameters: float, float
 	* Returns: boolean
 	******************************************/
-	public boolean collide(float fX, float fY)
-	{
-		float A = vrPosition.fX - (vrScale.fX * iFrameWidth);
-		float B = vrPosition.fX + (vrScale.fX * iFrameWidth);
-		float C = vrPosition.fY - (vrScale.fY * iFrameHeight);
-		float D = vrPosition.fY + (vrScale.fY * iFrameHeight);
-		
-		//Test is the point are inside Sprite Frame 
-		if (fX >= A && fX <= B)
-		{
-			if (fY >= C && fY <= D)
-			{
-				return true;
-			}
-		}
-			
-		return false;
-	}
+	public boolean collide(float fX, float fY) {
+        float A = vrPosition.fX - (vrScale.fX * iFrameWidth);
+        float B = vrPosition.fX + (vrScale.fX * iFrameWidth);
+        float C = vrPosition.fY - (vrScale.fY * iFrameHeight);
+        float D = vrPosition.fY + (vrScale.fY * iFrameHeight);
+
+        //Test is the point are inside Sprite Frame
+        if (fX >= A && fX <= B) {
+            if (fY >= C && fY <= D) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
+    public boolean collideX(float fX) {
+        float A = vrPosition.fX - (vrScale.fX * iFrameWidth);
+        float B = vrPosition.fX + (vrScale.fX * iFrameWidth);
+        float C = vrPosition.fY - (vrScale.fY * iFrameHeight);
+        float D = vrPosition.fY + (vrScale.fY * iFrameHeight);
+
+        //Test is the point are inside Sprite Frame
+        if (fX >= A && fX <= B) {
+
+            return true;
+
+        }
+
+        return false;
+    }
+
+    public boolean collideY(float fY) {
+        float A = vrPosition.fX - (vrScale.fX * iFrameWidth);
+        float B = vrPosition.fX + (vrScale.fX * iFrameWidth);
+        float C = vrPosition.fY - (vrScale.fY * iFrameHeight);
+        float D = vrPosition.fY + (vrScale.fY * iFrameHeight);
+
+        //Test is the point are inside Sprite Frame
+
+        if (fY >= C && fY <= D) {
+            return true;
+        }
+
+
+        return false;
+    }
 	
 	/*******************************************
 	* Name: getSpriteWidth()

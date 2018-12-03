@@ -6,7 +6,6 @@ import br.unitins.projetofinalcg.AndGraph.AGScene;
 import br.unitins.projetofinalcg.AndGraph.AGScreenManager;
 import br.unitins.projetofinalcg.AndGraph.AGSoundManager;
 import br.unitins.projetofinalcg.AndGraph.AGSprite;
-import br.unitins.projetofinalcg.AndGraph.AGTimer;
 
 public class CenaMenu extends AGScene {
     private AGSprite background = null;
@@ -53,7 +52,18 @@ public class CenaMenu extends AGScene {
         if (AGInputManager.vrTouchEvents.screenClicked()) {
             AGSoundManager.vrSoundEffects.play(codSom);
             if (playButton.collide(AGInputManager.vrTouchEvents.getLastPosition())) {
-                vrGameManager.setCurrentScene(Principal.JOGO);
+                if (!Configuracoes.isPlay)
+                    vrGameManager.setCurrentScene(Principal.FASE1);
+                else {
+                    switch (Configuracoes.round) {
+                        case 1:
+                            vrGameManager.setCurrentScene(Principal.FASE1);
+                            break;
+                        case 2:
+                            vrGameManager.setCurrentScene(Principal.FASE2);
+                            break;
+                    }
+                }
                 return;
             }
             if (helpButton.collide(AGInputManager.vrTouchEvents.getLastPosition())) {
@@ -64,7 +74,6 @@ public class CenaMenu extends AGScene {
 
         }
         if (AGInputManager.vrTouchEvents.backButtonClicked()) {
-            vrGameManager.setCurrentScene(Principal.CREDITOS);
             return;
         }
 
